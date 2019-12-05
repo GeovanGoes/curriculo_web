@@ -29,6 +29,10 @@
     "typescript": "~3.5.3",
     "zone.js": "~0.9.1"
   },
+  "engines": {
+	"node": "10.17.0",
+	"npm": "6.11.3"
+  },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.803.19",
     "@angular/cli": "~8.3.19",
