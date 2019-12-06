@@ -15,6 +15,6 @@ import { CurriculoComponent } from './curriculo/curriculo.component';
     AppRoutingModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [CurriculoComponent]
 })
 export class AppModule { }
