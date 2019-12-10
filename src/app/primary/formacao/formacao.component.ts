@@ -1,11 +1,11 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-formacao-academica',
-  templateUrl: './formacao-academica.component.html',
-  styleUrls: ['./formacao-academica.component.scss']
+  selector: 'app-formacao',
+  templateUrl: './formacao.component.html',
+  styleUrls: ['./formacao.component.scss']
 })
-export class FormacaoAcademicaComponent implements OnInit {
+export class FormacaoComponent implements OnInit {
 
   @Input()
   instituicao: string;

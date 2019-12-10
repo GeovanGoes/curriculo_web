@@ -45,22 +45,7 @@
 	<!--Objetivo-->
 	<div class="alert alert-success text-center" role="alert">Desenvolvedor</div>
 
-	<!--Formação acadêmica-->
-	<div class="panel panel-info">
-		<div class="panel-heading">
-			<h3 id="FormacaoAcademica" class="panel-title">Formação Acadêmica</h3>
-		</div>
-		<div class="panel-body">
-			
-			<app-formacao-academica 
-				*ngFor="let formacaoAcademica of formacoesAcademicas"
-				[instituicao]="formacaoAcademica.instituicao"
-				[curso]="formacaoAcademica.curso"
-				[anoConclusao]="formacaoAcademica.anoConclusao"
-				[concluido]="formacaoAcademica.concluido">
-			</app-formacao-academica>
-		</div>
-	</div>
+	<app-formacao-academica [formacoesAcademicas]="formacoesAcademicas"></app-formacao-academica>
 
 
 	<!--Formação complementar-->

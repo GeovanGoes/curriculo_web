@@ -4,17 +4,26 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CurriculoComponent } from './curriculo/curriculo.component';
-import { FormacaoAcademicaComponent } from './primary/formacao-academica/formacao-academica.component';
+import { FormacaoComponent } from './primary/formacao/formacao.component';
+import { FormacaoComplementarComponent } from './primary/panel/formacao-complementar/formacao-complementar.component';
+import { FormacaoAcademicaComponent } from './primary/panel/formacao-academica/formacao-academica.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { CurriculoService } from './service/curriculo.service';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
     AppComponent,
     CurriculoComponent,
-    FormacaoAcademicaComponent
+    FormacaoComponent,
+    FormacaoAcademicaComponent,
+    FormacaoComplementarComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CommonModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [CurriculoComponent]
