@@ -1,10 +1,13 @@
+import { TipoFormacao } from './tipo-formacao.model';
 
 
 
 export interface Formacao {
-  instituicao: string;
-  curso: string;
+  nomeInstituicao: string;
+  descricaoInstituicao: string;
+  nomeCurso: string;
   concluido: boolean;
-  anoConclusao: string;
+  anoConlusao: string;
   link: string;
+  tipoFormacao: TipoFormacao;
 }

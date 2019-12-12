@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Formacao } from 'src/app/model/formacao.model';
 
 @Component({
   selector: 'app-formacao-complementar',
@@ -6,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./formacao-complementar.component.scss']
 })
 export class FormacaoComplementarComponent implements OnInit {
+
+  @Input()
+  formacoesComplementares: Formacao[];
 
   constructor() { }
 

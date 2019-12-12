@@ -1,1 +1,18 @@
-<p>formacao-complementar works!</p>
+<!--Formação complementar-->
+<div class="panel panel-info">
+    <div class="panel-heading">
+        <h3 id="FormacaoComplementar" class="panel-title">Formação Complementar</h3>
+    </div>
+    <div class="panel-body">
+
+        <dl class="dl-horizontal">
+            <app-formacao 
+                *ngFor="let formacaoComplementar of formacoesComplementares"
+                [instituicao]="formacaoComplementar.nomeInstituicao"
+                [curso]="formacaoComplementar.nomeCurso"
+                [anoConclusao]="formacaoComplementar.anoConlusao"
+                [concluido]="formacaoComplementar.concluido">
+            </app-formacao>
+        </dl>
+    </div>
+</div>

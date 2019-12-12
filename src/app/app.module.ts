@@ -7,9 +7,10 @@ import { CurriculoComponent } from './curriculo/curriculo.component';
 import { FormacaoComponent } from './primary/formacao/formacao.component';
 import { FormacaoComplementarComponent } from './primary/panel/formacao-complementar/formacao-complementar.component';
 import { FormacaoAcademicaComponent } from './primary/panel/formacao-academica/formacao-academica.component';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { CurriculoService } from './service/curriculo.service';
+import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { HabilidadeComponent } from './primary/panel/habilidade/habilidade.component';
+import { HabilidadesComponent } from './primary/panel/habilidades/habilidades.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,9 @@ import { CommonModule } from '@angular/common';
     CurriculoComponent,
     FormacaoComponent,
     FormacaoAcademicaComponent,
-    FormacaoComplementarComponent
+    FormacaoComplementarComponent,
+    HabilidadeComponent,
+    HabilidadesComponent
   ],
   imports: [
     BrowserModule,

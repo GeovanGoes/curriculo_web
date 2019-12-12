@@ -7,9 +7,9 @@
         
         <app-formacao 
             *ngFor="let formacaoAcademica of formacoesAcademicas"
-            [instituicao]="formacaoAcademica.instituicao"
-            [curso]="formacaoAcademica.curso"
-            [anoConclusao]="formacaoAcademica.anoConclusao"
+            [instituicao]="formacaoAcademica.nomeInstituicao"
+            [curso]="formacaoAcademica.nomeCurso"
+            [anoConclusao]="formacaoAcademica.anoConlusao"
             [concluido]="formacaoAcademica.concluido">
         </app-formacao>
     </div>

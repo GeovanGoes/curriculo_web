@@ -19,7 +19,7 @@
 
 	<div class="page-header">
 		<h2 class="text-center">
-			<span class="glyphicon glyphicon-user" aria-hidden="true"></span>Geovan Goes
+			<span class="fas fa-skating" aria-hidden="true"></span>{{curriculo.nome}}
 		</h2>
 	</div>
 
@@ -28,84 +28,25 @@
 		<div class="col-md-3">
 			<address class="text-right">
 				<span class="glyphicon glyphicon-home" aria-hidden="true"></span>
-				Rua José Dias da Costa <br />São Paulo, SP - 05661-060
+				{{curriculo.endereco.rua}} <br />{{curriculo.endereco.cidade}}, {{curriculo.endereco.estado}} - {{curriculo.endereco.cep}}
 			</address>
 		</div>
 
 		<!--Contato-->
 		<div class="col-md-9 text-right">
 			23 anos, solteiro, não fumante<span class="glyphicon glyphicon-user"
-				aria-hidden="true"></span><br /> (11) 9 8976-2229<span
+				aria-hidden="true"></span><br /> {{curriculo.numeroCelular}}<span
 				class="glyphicon glyphicon-phone" aria-hidden="true"></span><br />
-			<a href="mailto:geovansilvagoes@gmail.com">geovansilvagoes@gmail.com<span
+			<a href="mailto:{{curriculo.email}}">{{curriculo.email}}<span
 				class="glyphicon glyphicon-envelope" aria-hidden="true"></span></a>
 		</div>
 	</div>
 
 	<!--Objetivo-->
-	<div class="alert alert-success text-center" role="alert">Desenvolvedor</div>
+	<div class="alert alert-success text-center" role="alert">{{curriculo.cargo}}</div>
 
 	<app-formacao-academica [formacoesAcademicas]="formacoesAcademicas"></app-formacao-academica>
-
-
-	<!--Formação complementar-->
-	<div class="panel panel-info">
-		<div class="panel-heading">
-			<h3 id="FormacaoComplementar" class="panel-title">Formação
-				Complementar</h3>
-		</div>
-		<div class="panel-body">
-
-			<dl class="dl-horizontal">
-
-				<!--SENAC Vendas-->
-				<br />
-				<dt>
-					<a href="http://www.sp.senac.br/" target="_blank">SENAC</a>
-				</dt>
-				<dd>
-					<strong>Técnico - Gestão em Vendas</strong>
-				</dd>
-				<dd>
-					<img class="glyphicon-png" src="_img/glyphicons-education.png" />
-					Concluído em 2010
-				</dd>
-
-
-				<!--ESPRO-->
-				<br />
-				<br />
-				<dt>
-					<a href="http://www.espro.org.br/" target="_blank">ESPRO</a>
-				</dt>
-				<dd>
-					<strong>Técnicas Bancárias</strong>
-				</dd>
-				<dd>
-					<img class="glyphicon-png" src="_img/glyphicons-education.png" />
-					Concluído em 2009
-				</dd>
-
-				<!--AOB-->
-				<br />
-				<br />
-				<dt>
-					<a href="http://www.obradoberco.org.br/" target="_blank">AOB</a>
-				</dt>
-				<dd>
-					<strong>Gestão Pessoal e Empresarial</strong>
-				</dd>
-				<dd>
-					<img class="glyphicon-png" src="_img/glyphicons-education.png" />
-					Concluído em 2007
-				</dd>
-				<dt>
-					<small>Associação Obra do Berço</small>
-				</dt>
-			</dl>
-		</div>
-	</div>
-
+	<app-formacao-complementar [formacoesComplementares]="formacoesComplementares"></app-formacao-complementar>
 
 	<!--Outros Conhecimentos-->
 	<div class="panel panel-info">
