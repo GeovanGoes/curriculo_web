@@ -14,6 +14,7 @@ export class FormacaoAcademicaComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log("formações academicas: ", this.formacoesAcademicas);
   }
 
 }

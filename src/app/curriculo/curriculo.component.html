@@ -19,7 +19,7 @@
 
 	<div class="page-header">
 		<h2 class="text-center">
-			<span class="fas fa-skating" aria-hidden="true"></span>{{curriculo.nome}}
+			<span class="fas fa-skating" aria-hidden="true"></span>{{curriculo?.nome}}
 		</h2>
 	</div>
 
@@ -28,112 +28,28 @@
 		<div class="col-md-3">
 			<address class="text-right">
 				<span class="glyphicon glyphicon-home" aria-hidden="true"></span>
-				{{curriculo.endereco.rua}} <br />{{curriculo.endereco.cidade}}, {{curriculo.endereco.estado}} - {{curriculo.endereco.cep}}
+				{{curriculo?.endereco.rua}} <br />{{curriculo?.endereco.cidade}}, {{curriculo?.endereco.estado}} - {{curriculo?.endereco.cep}}
 			</address>
 		</div>
 
 		<!--Contato-->
 		<div class="col-md-9 text-right">
 			23 anos, solteiro, não fumante<span class="glyphicon glyphicon-user"
-				aria-hidden="true"></span><br /> {{curriculo.numeroCelular}}<span
+				aria-hidden="true"></span><br /> {{curriculo?.numeroCelular}}<span
 				class="glyphicon glyphicon-phone" aria-hidden="true"></span><br />
-			<a href="mailto:{{curriculo.email}}">{{curriculo.email}}<span
+			<a href="mailto:{{curriculo?.email}}">{{curriculo?.email}}<span
 				class="glyphicon glyphicon-envelope" aria-hidden="true"></span></a>
 		</div>
 	</div>
 
 	<!--Objetivo-->
-	<div class="alert alert-success text-center" role="alert">{{curriculo.cargo}}</div>
+	<div class="alert alert-success text-center" role="alert">{{curriculo?.cargo}}</div>
 
 	<app-formacao-academica [formacoesAcademicas]="formacoesAcademicas"></app-formacao-academica>
 	<app-formacao-complementar [formacoesComplementares]="formacoesComplementares"></app-formacao-complementar>
 
 	<!--Outros Conhecimentos-->
-	<div class="panel panel-info">
-		<div class="panel-heading">
-			<h3 id="ConhecimentosTecnicoseIdiomas" class="panel-title">Conhecimentos
-				Técnicos e Idiomas</h3>
-		</div>
-		<div class="panel-body">
-			<div class="row">
-				<div class="col-md-4">
-					<ul class="list-group">
-						<li class="list-group-item active text-center">Linguagens e
-							Conceitos</li>
-						<li class="list-group-item"><span class="badge">Intermediário</span>
-							JAVA Web/Desktop</li>
-						<li class="list-group-item"><span class="badge">Intermediário</span>
-							Programação Orientada a Objetos</li>
-						<li class="list-group-item"><span class="badge">Intermediário</span>
-							Metodologias de Desenvolvimento Ágil</li>
-						<li class="list-group-item"><span class="badge">Básico</span>
-							PHP</li>
-						<li class="list-group-item"><span class="badge">Básico</span>
-							SQL</li>
-						<li class="list-group-item"><span class="badge">Intermediário</span>
-							HTML 5</li>
-						<li class="list-group-item"><span class="badge">Intermediário</span>
-							CSS 3</li>
-						<li class="list-group-item"><span class="badge">Intermediário</span>
-							Javascript</li>
-
-					</ul>
-				</div>
-				<div class="col-md-4">
-					<ul class="list-group">
-						<li class="list-group-item active text-center">Frameworks,
-							Bibliotecas, Padrões e Sistemas Operacionais</li>
-						<li class="list-group-item"><span class="badge">Intermediário</span>
-							Spring Framework</li>
-						<li class="list-group-item"><span class="badge">Intermediário</span>
-							Hibernate 4</li>
-						<li class="list-group-item"><span class="badge">Intermediário</span>
-							JPA</li>
-						<li class="list-group-item"><span class="badge">Intermediário</span>
-							CDI</li>
-						<li class="list-group-item"><span class="badge">Intermediário</span>
-							jQuery</li>
-						<li class="list-group-item"><span class="badge">Intermediário</span>
-							Bootstrap</li>
-						<li class="list-group-item"><span class="badge">Básico</span>
-							JSF</li>
-						<li class="list-group-item"><span class="badge">Básico</span>
-							EJB</li>
-						<li class="list-group-item"><span class="badge">Básico</span>
-							Primefaces</li>
-						<li class="list-group-item"><span class="badge">Avançado</span>
-							MVC</li>
-						<li class="list-group-item"><span class="badge">Intermediário</span>
-							Linux Ubuntu/Debian</li>
-						<li class="list-group-item"><span class="badge">Avançado</span>
-							Windows 7/8/10</li>
-					</ul>
-				</div>
-				<div class="col-md-4">
-					<ul class="list-group">
-						<li class="list-group-item active text-center">Idiomas e
-							Ferramentas de Escritório</li>
-						<li class="list-group-item"><span class="badge">Nativo</span>
-							Português</li>
-						<li class="list-group-item"><span class="badge">Intermediário</span>
-							Inglês - Escrita/Leitura</li>
-						<li class="list-group-item"><span class="badge">Básico</span>
-							Inglês - Conversação</li>
-						<li class="list-group-item"><span class="badge">Básico</span>
-							Espanhol</li>
-
-						<li class="list-group-item"><span class="badge">Intermediário</span>
-							MS Access</li>
-						<li class="list-group-item"><span class="badge">Intermediário</span>
-							MS Excel</li>
-						<li class="list-group-item"><span class="badge">Intermediário</span>
-							MS Word</li>
-					</ul>
-				</div>
-			</div>
-
-		</div>
-	</div>
+	<app-habilidades-section [habilidades]="curriculo?.habilidades"></app-habilidades-section>
 
 	<!--Trajetória profissional-->
 	<div class="panel panel-info">

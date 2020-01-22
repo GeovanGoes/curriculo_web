@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class CurriculoService {
 
-    baseURL: string = 'http://localhost:8080';
+    baseURL: string = 'http://localhost:9000';
 
     resource: string = 'curriculo';
 

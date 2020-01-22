@@ -1,24 +1,23 @@
-import { Component, OnInit, Input, OnChanges, SimpleChange, SimpleChanges } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { Habilidade } from 'src/app/model/habilidade.model';
-import { Observable, of } from 'rxjs';
 
 @Component({
-  selector: 'app-habilidades',
-  templateUrl: './habilidades.component.html',
-  styleUrls: ['./habilidades.component.scss']
+  selector: 'app-habilidades-section',
+  templateUrl: './habilidades-section.component.html',
+  styleUrls: ['./habilidades-section.component.scss']
 })
-export class HabilidadesComponent implements OnInit, OnChanges {
+export class HabilidadesSectionComponent implements OnInit, OnChanges {
 
-  @Input()
-  habilidades: Habilidade [];
 
-  @Input()
-  $habilidades: Observable<Habilidade[]>;
+  @Input() habilidades: Habilidade[] = [];
 
   habilidadesMap: Map<String, Habilidade[]> = new Map<String, Habilidade[]>(); 
   keys: Array<String> = new Array<String>();
 
   constructor() { }
+  
+  ngOnInit() {
+  }
 
   ngOnChanges(changes: SimpleChanges){
     if (changes.habilidades)
@@ -42,14 +41,11 @@ export class HabilidadesComponent implements OnInit, OnChanges {
             keys.push(habilidade.tipoHabilidade.titulo);
           }
         });
-  
+        
         this.habilidadesMap = habilidadesMap;
         this.keys = keys;
       }
     }
-  }
-
-  ngOnInit() {
   }
 
 }

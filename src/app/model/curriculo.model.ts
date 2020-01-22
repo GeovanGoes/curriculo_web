@@ -1,5 +1,6 @@
 import { Formacao } from './formacao.model';
 import { Endereco } from './endereco.model';
+import { Habilidade } from './habilidade.model';
 
 
 
@@ -12,4 +13,5 @@ export interface Curriculo {
     numeroCelular: string;
     endereco: Endereco;
     formacao: Formacao[];
+    habilidades: Habilidade[];
 }

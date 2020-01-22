@@ -11,6 +11,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { HabilidadeComponent } from './primary/panel/habilidade/habilidade.component';
 import { HabilidadesComponent } from './primary/panel/habilidades/habilidades.component';
+import { HabilidadesSectionComponent } from './primary/section/habilidades-section/habilidades-section.component';
+import { FormacaoSectionComponent } from './primary/section/formacao-section/formacao-section.component';
+import { TrajetoriaProfissionalSectionComponent } from './primary/section/trajetoria-profissional-section/trajetoria-profissional-section.component';
+import { AtividadesAcademicasSectionComponent } from './primary/section/atividades-academicas-section/atividades-academicas-section.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +24,11 @@ import { HabilidadesComponent } from './primary/panel/habilidades/habilidades.co
     FormacaoAcademicaComponent,
     FormacaoComplementarComponent,
     HabilidadeComponent,
-    HabilidadesComponent
+    HabilidadesComponent,
+    HabilidadesSectionComponent,
+    FormacaoSectionComponent,
+    TrajetoriaProfissionalSectionComponent,
+    AtividadesAcademicasSectionComponent
   ],
   imports: [
     BrowserModule,

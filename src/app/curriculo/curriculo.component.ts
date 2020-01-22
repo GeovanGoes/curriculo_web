@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges, SimpleChanges } from '@angular/core';
 import { Formacao } from '../model/formacao.model';
 import { CurriculoService } from '../service/curriculo.service';
 import { Curriculo } from '../model/curriculo.model';
+import { Habilidade } from '../model/habilidade.model';
+import { Observable, of } from 'rxjs';
 
 @Component({
   selector: 'app-curriculo',
@@ -13,30 +15,34 @@ export class CurriculoComponent implements OnInit {
   curriculo: Curriculo;
   formacoesAcademicas: Formacao[] = [];
   formacoesComplementares: Formacao[] = [];
+  habilidades: Habilidade[] = [];
+
+  $habilidades: Observable<Habilidade[]>;
+
+
 
   constructor(private service: CurriculoService) { }
+
 
   ngOnInit() {
 
 
     this.service.obterCurriculo(1).subscribe(res => {
       console.log(res);
-
-
       if (res)
       {
-        const curriculo: Curriculo = res as Curriculo;
-        if (curriculo)
+        this.curriculo = res as Curriculo;
+        if (this.curriculo)
         {
-          this.curriculo = curriculo;
-          if (curriculo.formacao)
+          if (this.curriculo.formacao)
           {
-            curriculo.formacao.forEach(item => {
+            this.curriculo.formacao.forEach(item => {
               if (item.tipoFormacao.descricao == "Formação Complementar")
                 this.formacoesComplementares.push(item);
               else if (item.tipoFormacao.descricao == "Formação Acadêmica")
                 this.formacoesAcademicas.push(item);
             });
+            this.habilidades = this.curriculo.habilidades;
           }
         }
       }

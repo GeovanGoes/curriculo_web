@@ -1,0 +1,16 @@
+<div class="panel panel-info">
+    <div class="panel-heading">
+        <h3 id="ConhecimentosTecnicoseIdiomas" class="panel-title">Conhecimentos
+            Técnicos e Idiomas</h3>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-4" *ngFor="let key of keys">
+                <ul class="list-group">
+                    <li class="list-group-item active text-center">{{ key }}</li>
+                    <app-habilidades [habilidades]="habilidadesMap.get(key)"></app-habilidades>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

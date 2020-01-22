@@ -14,6 +14,7 @@ export class HabilidadeComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log("habilidade", this.habilidade);
   }
 
 }
