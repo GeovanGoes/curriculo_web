@@ -28,7 +28,6 @@ export class HabilidadesSectionComponent implements OnInit, OnChanges {
         const keys = new Array<String>();
   
         this.habilidades.forEach(habilidade => {
-          console.log(habilidade);
           if (habilidadesMap.has(habilidade.tipoHabilidade.titulo))
           {
             const arr: Habilidade[] = habilidadesMap.get(habilidade.tipoHabilidade.titulo);

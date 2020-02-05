@@ -1,1 +1,8 @@
-<p>atividades-academicas-section works!</p>
+<div class="panel panel-info">
+    <div class="panel-heading">
+        <h3 id="AtividadesAcademicas" class="panel-title">Atividades Acadêmicas</h3>
+    </div>
+    <div class="panel-body">
+        <app-item-atividade-academica *ngFor="let item of atividadesAcademicas" [item]="item"></app-item-atividade-academica>
+    </div>
+</div>

@@ -1,1 +1,12 @@
-<p>trajetoria-profissional-section works!</p>
+<div class="panel panel-info">
+    <div class="panel-heading">
+        <h3 id="TrajetoriaProfissional" class="panel-title">Trajetória Profissional</h3>
+    </div>
+
+    <div class="panel-body">
+
+        <dl class="dl-horizontal">
+            <app-item-trajetoria-profissional *ngFor="let item of trajetoria" [item]="item"></app-item-trajetoria-profissional>
+        </dl>
+    </div>
+</div>

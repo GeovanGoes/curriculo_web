@@ -15,6 +15,9 @@ import { HabilidadesSectionComponent } from './primary/section/habilidades-secti
 import { FormacaoSectionComponent } from './primary/section/formacao-section/formacao-section.component';
 import { TrajetoriaProfissionalSectionComponent } from './primary/section/trajetoria-profissional-section/trajetoria-profissional-section.component';
 import { AtividadesAcademicasSectionComponent } from './primary/section/atividades-academicas-section/atividades-academicas-section.component';
+import { ItemTrajetoriaProfissionalComponent } from './primary/section/trajetoria-profissional-section/item-trajetoria-profissional/item-trajetoria-profissional.component';
+import { ItemAtividadeAcademicaComponent } from './primary/section/atividades-academicas-section/item-atividade-academica/item-atividade-academica.component';
+import { PrimaryComponent } from './primary/primary.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,10 @@ import { AtividadesAcademicasSectionComponent } from './primary/section/atividad
     HabilidadesSectionComponent,
     FormacaoSectionComponent,
     TrajetoriaProfissionalSectionComponent,
-    AtividadesAcademicasSectionComponent
+    AtividadesAcademicasSectionComponent,
+    ItemTrajetoriaProfissionalComponent,
+    ItemAtividadeAcademicaComponent,
+    PrimaryComponent
   ],
   imports: [
     BrowserModule,

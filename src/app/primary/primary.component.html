@@ -1,0 +1,65 @@
+<nav class="navbar navbar-inverse navbar-fixed-bottom">
+	<div class="container">
+		<div id="navbar" class="collapse navbar-collapse">
+			<ul class="nav navbar-nav">
+				<li><a href="#DadosPessoais">Dados Pessoais</a></li>
+				<li><a href="#FormacaoAcademica">Formação Acadêmica</a></li>
+				<li><a href="#FormacaoComplementar">Formação Complementar</a></li>
+				<li><a href="#ConhecimentosTecnicoseIdiomas">Conhecimentos
+						Técnicos e Idiomas</a></li>
+				<li><a href="#TrajetoriaProfissional">Trajetória
+						Profissional</a></li>
+				<li><a href="#AtividadesAcademicas">Atividades Acadêmicas</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<div class="container">
+
+	<div class="page-header">
+		<h2 class="text-center">
+			<span class="fas fa-skating" aria-hidden="true"></span>{{curriculo?.nome}}
+		</h2>
+	</div>
+
+	<div class="row" id="DadosPessoais">
+		<!--Endereço-->
+		<div class="col-md-3">
+			<address class="text-right">
+				<span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+				{{curriculo?.endereco.rua}} <br />{{curriculo?.endereco.cidade}}, {{curriculo?.endereco.estado}} - {{curriculo?.endereco.cep}}
+			</address>
+		</div>
+
+		<!--Contato-->
+		<div class="col-md-9 text-right">
+			23 anos, solteiro, não fumante<span class="glyphicon glyphicon-user"
+				aria-hidden="true"></span><br /> {{curriculo?.numeroCelular}}<span
+				class="glyphicon glyphicon-phone" aria-hidden="true"></span><br />
+			<a href="mailto:{{curriculo?.email}}">{{curriculo?.email}}<span
+				class="glyphicon glyphicon-envelope" aria-hidden="true"></span></a>
+		</div>
+	</div>
+
+	<!--Objetivo-->
+	<div class="alert alert-success text-center" role="alert">{{curriculo?.cargo}}</div>
+
+	<!-- Formacao Academica-->
+	<app-formacao-academica [formacoesAcademicas]="formacoes?.academica"></app-formacao-academica>
+
+	<!-- Formacao Complementar-->
+	<app-formacao-complementar [formacoesComplementares]="formacoes?.complementar"></app-formacao-complementar>
+
+	<!--Outros Conhecimentos-->
+	<app-habilidades-section [habilidades]="curriculo?.habilidades"></app-habilidades-section>
+
+
+	<!--Trajetória profissional-->
+	<app-trajetoria-profissional-section [trajetoria]="curriculo?.trajetoriaProfissional"></app-trajetoria-profissional-section>
+
+	<!--Atividades Acadêmicas-->
+	<app-atividades-academicas-section [atividadesAcademicas]="curriculo?.atividadesAcademicas"></app-atividades-academicas-section>
+
+</div>
+
