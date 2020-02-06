@@ -1,0 +1,30 @@
+
+<form [formGroup]="form" >
+    <input type="text" placeholder="Título" formControlName="titulo">
+    <input type="text" placeholder="Descrição" formControlName="descricao">
+    <input type="file" placeholder="Fotos" formControlName="fotos">
+    <button (click)="submit()">
+        Enviar
+    </button>
+</form>
+
+<div>
+    <table>
+        <thead>
+            <th>
+                Título
+            </th>
+            <th>
+                Ações
+            </th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let plano of planos">
+                <td>{{ plano.title }}</td>
+                <td><a href="">Abrir</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+
+</div>

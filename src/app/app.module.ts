@@ -18,6 +18,8 @@ import { AtividadesAcademicasSectionComponent } from './primary/section/atividad
 import { ItemTrajetoriaProfissionalComponent } from './primary/section/trajetoria-profissional-section/item-trajetoria-profissional/item-trajetoria-profissional.component';
 import { ItemAtividadeAcademicaComponent } from './primary/section/atividades-academicas-section/item-atividade-academica/item-atividade-academica.component';
 import { PrimaryComponent } from './primary/primary.component';
+import { GerenciarComponent } from './planos/gerenciar/gerenciar.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -34,15 +36,18 @@ import { PrimaryComponent } from './primary/primary.component';
     AtividadesAcademicasSectionComponent,
     ItemTrajetoriaProfissionalComponent,
     ItemAtividadeAcademicaComponent,
-    PrimaryComponent
+    PrimaryComponent,
+    GerenciarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CommonModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule, 
+    FormsModule
   ],
   providers: [],
-  bootstrap: [CurriculoComponent]
+  bootstrap: [GerenciarComponent]
 })
 export class AppModule { }

@@ -1,4 +1,4 @@
 
 
-
-<app-primary [curriculo]="curriculo"></app-primary>
+<div *ngIf="!curriculo"><a href="../planos">Ir para planos</a></div>
+<app-primary *ngIf="curriculo" [curriculo]="curriculo"></app-primary>
