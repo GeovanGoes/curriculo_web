@@ -19,9 +19,9 @@ export class GerenciarComponent implements OnInit {
   ngOnInit() {
     console.log('init');
     this.form = this.formBuilder.group({
-      titulo: ['', Validators.required],
-      descricao: [''],
-      fotos: ['']
+      title: ['', Validators.required],
+      description: [''],
+      fotos: [[]]
     });
 
 
